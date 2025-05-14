@@ -12,7 +12,7 @@ interface TokenMetadata {
 }
 
 export const NFT: FC<{ tokenId: number, nftAddress: Address, chain: "sepolia" }> = async ({ tokenId, nftAddress, chain }) => {
-    const token = await fetch(`${process.env.METADATA_SERVER_URL}/api/metadata/0`)
+    const token = await fetch(`${process.env.METADATA_SERVER_URL}/api/metadata/${tokenId}`)
         .then(data => data.json() as Promise<TokenMetadata>)
         .catch(console.error);
 
