@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import "./globals.css";
 import { ToastProvider } from "@/components/layout/toast";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default async function RootLayout({ children }: Readonly <{ children: Rea
         <ToastProvider>
           <div className="flex flex-col relative border-x-container items-stretch justify-center flex-1">
             {children}
+            <SpeedInsights />
           </div>
         </ToastProvider>
         <Footer/>
