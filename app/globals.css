@@ -27,11 +27,13 @@ html {
   @apply opacity-50;
 }
 
-#hero {
-  background-image: url("/hero@3x.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
+@media (min-width: 1024px) {
+  #hero {
+    background-image: url("/hero@2x.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
 }
 
 .text-gradient {
